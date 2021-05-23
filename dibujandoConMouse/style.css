@@ -1,0 +1,120 @@
+:root{
+    --redPink: #e63946;
+    --white: #f1faee;
+    --light-blue: #a8dadc;
+    --medium-blue: #457b9d;
+    --blue: #1d3557;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+nav {
+    background-color: var(--redPink);
+    padding: 10px 0 0 0;
+}
+nav h1{
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Pacifico', cursive;
+    color: var(--white)
+}
+nav ul{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--light-blue);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+nav ul li{
+    list-style: none;
+    font-size: 1.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: var(--medium-blue);
+}
+/* li de seleccion de color */
+nav .nav__li--color{
+    display: flex;
+    width: 90px;
+    justify-content: space-between;
+}
+/* boton de seleccion de color */
+nav .nav__input-color{
+    width: 38px;
+    height: 30px;
+    border: none;
+    background-color: var(--light-blue);
+}
+/* input de tamaño de pincel */
+nav .nav__input-number{
+    width: 35px;
+    height: 25px;
+    border: var(--medium-blue) solid 2px;
+    padding: 8px;
+}
+/* Paleta de colores */
+.colors-container{
+    display: none;
+    width: 120px;
+    height: 120px;
+    padding: 2px;
+    position: absolute;
+    top: 135px;
+    background-color: #2d3436;
+    border-radius: 8px;
+}
+.colors-container input{
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    border: 2px #2f3640 solid;
+}
+#red{
+    background-color: #e74c3c;
+}
+#yellow{
+    background-color: #f1c40f;
+}
+#blue{
+    background-color: #2980b9;
+}
+#green{
+    background-color: #2ecc71;
+}
+#orange{
+    background-color: #e67e22;
+}
+#purple{
+    background-color: #9b59b6;
+}
+#black{
+    background-color: #2c3e50;
+}
+#white{
+    background-color: #ecf0f1;
+}
+#brown{
+    background-color: #9c6644;
+}
+.main__canvas--container{
+    width: 100%;
+    display: flex;
+    padding: 5px 0;
+    justify-content: center;
+}
+canvas{
+    width: 98%;
+    height: 65vh;
+    border: solid 2px var(--medium-blue);
+    border-radius: 8px;
+}
+.prueba{
+    background: aqua;
+}
