@@ -82,9 +82,10 @@ canvas{
     border-radius: 15px;
 }
 .challenge__div--container img{
-    width: 90%;
+    width: 100%;
     max-width: 300px;
     height: 85%;
+    border-radius: 15px;
 }
 .challenge__div--bottom{
     width: 100%;
@@ -93,7 +94,7 @@ canvas{
     flex-direction: row-reverse;
     align-items: center;
     background-color: var(--medium-blue);
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 12px 12px;
 }
 .challenge__div--bottom i{
     font-size: 1.4rem;
@@ -111,4 +112,8 @@ canvas{
     opacity: 0.8;
     align-self: flex-end;
     left: 15px;
+}
+.challenge__img--size{
+    width: 100px;
+    height: 100px;
 }
