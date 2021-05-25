@@ -5,7 +5,7 @@ const liChallenge = document.getElementById("li-challenge");
 const challenge = document.getElementById("challenge");
 const iRandom = document.getElementById("iRandom")
 const imgChallenge = document.getElementById("challenge--img")
-const imgs = ["../img/cheems.png", "./img/gatoMotivado.jpg", "../img/satimaOK.jpg"]
+const imgs = ["../img/cheems.png", "./img/gatoMotivado.jpg", "../img/satimaOK.jpg", "../img/akatsuki.png", "../img/Pizzero.png", "../img/react.jpg"]
 
 //----Llamada a funciones----
 liChallenge.addEventListener("click", displayOn);

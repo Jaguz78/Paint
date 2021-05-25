@@ -68,10 +68,9 @@ nav .nav__input-number{
     align-items: center;
 }
 canvas{
-    width: 98%;
-    height: 65vh;
     border: solid 2px var(--medium-blue);
     border-radius: 8px;
+    cursor: pointer;
 }
 .challenge__div--container{
     width: 80%;
@@ -85,7 +84,7 @@ canvas{
     width: 100%;
     max-width: 300px;
     height: 85%;
-    border-radius: 15px;
+    border-radius: 13px 13px 0 0;
 }
 .challenge__div--bottom{
     width: 100%;
@@ -101,6 +100,9 @@ canvas{
     color: var(--blue);  
     margin: 10px;
 }
+#li-challenge{
+    cursor: pointer;
+}
 .hidden{
     display: none;
 }
@@ -112,8 +114,6 @@ canvas{
     opacity: 0.8;
     align-self: flex-end;
     left: 15px;
-}
-.challenge__img--size{
-    width: 100px;
-    height: 100px;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
