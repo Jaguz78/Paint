@@ -110,7 +110,7 @@ canvas{
 .erased-container{
     position: absolute;
     left: 4px;
-    bottom: 62px;
+    bottom: 130px;
 }
 #erased-input{
     display: none;

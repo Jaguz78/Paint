@@ -4,7 +4,7 @@ var rect = canvas.getBoundingClientRect();
 var colorElegido = document.getElementById("input-color");
 var size = document.getElementById("size");
 canvas.width = window.innerWidth - 10;
-canvas.height = 330;
+canvas.height = window.innerHeight - 270;
 hoja.fillStyle = "white";
 hoja.fillRect(0, 0, canvas.width, canvas.height);
 
