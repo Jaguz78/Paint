@@ -96,7 +96,7 @@ canvas{
     border-radius: 0 0 12px 12px;
 }
 .challenge__div--bottom i{
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: var(--blue);  
     margin: 10px;
 }
@@ -112,8 +112,5 @@ canvas{
     font-size: 2.8rem;
     color: var(--medium-blue);
     opacity: 0.8;
-    align-self: flex-end;
-    left: 15px;
     cursor: pointer;
-    margin-bottom: 10px;
 }

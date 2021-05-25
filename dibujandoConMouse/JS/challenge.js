@@ -5,7 +5,8 @@ const liChallenge = document.getElementById("li-challenge");
 const challenge = document.getElementById("challenge");
 const iRandom = document.getElementById("iRandom")
 const imgChallenge = document.getElementById("challenge--img")
-const imgs = ["../img/cheems.png", "./img/gatoMotivado.jpg", "../img/satimaOK.jpg", "../img/akatsuki.png", "../img/Pizzero.png", "../img/react.jpg"]
+const imgs = ["../img/cheems.png", "./img/gatoMotivado.jpg", "../img/satimaOK.jpg", "../img/akatsuki.png", "../img/Pizzero.png",
+             "../img/react.jpg", "../img/red.jpg", "../img/obligame-prro.jpg"]
 
 //----Llamada a funciones----
 liChallenge.addEventListener("click", displayOn);
@@ -25,6 +26,8 @@ function displayOff(){
     challenge.classList.add('hidden');
 }
 randomNumber = (max) => Math.floor(Math.random()*max);
+
 function changeImage(){
-    imgChallenge.src = imgs[Math.floor(randomNumber(imgs.length))];
+    imgChallenge.src = "../img/loading.png";
+    setTimeout(_ => imgChallenge.src = imgs[Math.floor(randomNumber(imgs.length))], 400)
 }
