@@ -3,7 +3,7 @@ var hoja = canvas.getContext("2d");
 var rect = canvas.getBoundingClientRect();
 var colorElegido = document.getElementById("input-color");
 var size = document.getElementById("size");
-canvas.width = window.innerWidth - 20;
+canvas.width = window.innerWidth - 10;
 canvas.height = 330;
 hoja.fillStyle = "white";
 hoja.fillRect(0, 0, canvas.width, canvas.height);
@@ -34,7 +34,7 @@ size.addEventListener("input", changeSize);
 
 let dibujando = false;
 let x, y;
-let color, grosor;
+let color, grosor = size.value;
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal, lienzo, grosor){
     lienzo.beginPath();
@@ -53,4 +53,15 @@ function changeColor () {
 }
 function changeSize () {
     grosor = size.value;
+}
+const erased = document.getElementById("erased-input");
+erased.addEventListener("input", borrar);
+
+function borrar (){
+    if(erased.checked){
+        color = "white";
+    }
+    else{
+        color = colorElegido.value;
+    }
 }
