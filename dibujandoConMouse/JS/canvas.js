@@ -68,10 +68,15 @@ function borrar (){
 }
 
 /* Hacer que funcione para celulares */
+canvas.addEventListener("touchstart", function (e) {
+    x = e.changedTouches[0].pageX - canvas.offsetLeft;
+    y = e.changedTouches[0].pageY - canvas.offsetTop;
+    dibujando = true;
+});
 canvas.addEventListener("touchmove", function (e) {
-    if (e.changedTouches == undefined) {
+    if (e.changedTouches == undefined && dibujando === true) {
         x = e.changedTouches[0].pageX - canvas.offsetLeft;
         y = e.changedTouches[0].pageY - canvas.offsetTop; 
-        dibujarLinea(color, x, y, e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop, hoja, grosor);
+        dibujarLinea(color, x, y, e.changedTouches[0] - canvas.offsetLeft, e.changedTouches[0] - canvas.offsetTop, hoja, grosor);
     }   
 });
