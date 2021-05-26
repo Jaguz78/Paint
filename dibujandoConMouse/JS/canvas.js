@@ -80,6 +80,5 @@ canvas.addEventListener("touchmove", function (e) {
         dibujarLinea(color, x, y, e.changedTouches[0].pageX - canvas.offsetLeft, e.changedTouches[0].pageY - canvas.offsetTop, hoja, grosor);
         x = e.changedTouches[0].pageX - canvas.offsetLeft;
         y = e.changedTouches[0].pageY - canvas.offsetTop; 
-        console.log(e.changedTouches[0]-canvas.offsetLeft)
     }   
 });
