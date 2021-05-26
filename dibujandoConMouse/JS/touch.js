@@ -36,6 +36,11 @@ function guardarLinea() {
     });
 }
 
+function guardarLinea() {
+     x: nuevaPosicionX;
+     y: nuevaPosicionY;
+}
+
 /**
  * Funcion dibuja la linea
  */

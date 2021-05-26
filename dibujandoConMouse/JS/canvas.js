@@ -1,4 +1,4 @@
-const canvas = document.getElementById("dibujito");
+/*const canvas = document.getElementById("dibujito");
 const hoja = canvas.getContext("2d");
 const rect = canvas.getBoundingClientRect();
 const colorElegido = document.getElementById("input-color");
@@ -6,7 +6,7 @@ const size = document.getElementById("size");
 canvas.width = window.innerWidth - 10;
 canvas.height = window.innerHeight - 220;
 hoja.fillStyle = "white";
-hoja.fillRect(0, 0, canvas.width, canvas.height);
+hoja.fillRect(0, 0, canvas.width, canvas.height);*/
 
 canvas.addEventListener("mousedown", function (e) {
     x = e.clientX - canvas.offsetLeft;
