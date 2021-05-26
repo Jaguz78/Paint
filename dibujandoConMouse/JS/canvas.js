@@ -3,7 +3,6 @@ const hoja = canvas.getContext("2d");
 const rect = canvas.getBoundingClientRect();
 const colorElegido = document.getElementById("input-color");
 const size = document.getElementById("size");
-const main = document.getElementById("main");
 canvas.width = window.innerWidth - 10;
 canvas.height = window.innerHeight - 220;
 hoja.fillStyle = "white";
@@ -15,14 +14,14 @@ canvas.addEventListener("mousedown", function (e) {
     dibujando = true;
 });
 canvas.addEventListener("mousemove", function (e) {
-    if (dibujando) {
+    if ((dibujando===true) && (e.changedTouches==undefined)) {
         dibujarLinea(color, x, y, e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop, hoja, grosor);
         x = e.clientX - canvas.offsetLeft;
         y = e.clientY - canvas.offsetTop;
     }
 });
 canvas.addEventListener("mouseup", function (e) {
-    if (dibujando) {
+    if ((dibujando===true) && (e.changedTouches==undefined)) {
         dibujarLinea(color, x, y, e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop, hoja, grosor)
         x = 0;
         y = 0;
@@ -69,14 +68,18 @@ function borrar (){
 
 /* Hacer que funcione para celulares */
 canvas.addEventListener("touchstart", function (e) {
+    if(e.changedTouches != undefined){
     x = e.changedTouches[0].pageX - canvas.offsetLeft;
     y = e.changedTouches[0].pageY - canvas.offsetTop;
     dibujando = true;
+    console.log("touchStart");
+    }
 });
 canvas.addEventListener("touchmove", function (e) {
-    if (e.changedTouches == undefined && dibujando === true) {
+    if (e.changedTouches != undefined) {
+        dibujarLinea(color, x, y, e.changedTouches[0].pageX - canvas.offsetLeft, e.changedTouches[0].pageY - canvas.offsetTop, hoja, grosor);
         x = e.changedTouches[0].pageX - canvas.offsetLeft;
         y = e.changedTouches[0].pageY - canvas.offsetTop; 
-        dibujarLinea(color, x, y, e.changedTouches[0] - canvas.offsetLeft, e.changedTouches[0] - canvas.offsetTop, hoja, grosor);
+        console.log(e.changedTouches[0]-canvas.offsetLeft)
     }   
 });
