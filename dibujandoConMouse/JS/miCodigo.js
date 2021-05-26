@@ -1,20 +1,27 @@
 // getElements
 const canvas = document.getElementById("dibujito");
 const contexto = canvas.getContext("2d");
-const rect = canvas.getBoundingClientRect();
 const size = document.getElementById("size");
 const colorElegido = document.getElementById("input-color");
-const erased = document.getElementById("erased");
+const erased = document.getElementById("erased-input");
 
 //Tamaño del canvas
 canvas.width = window.innerWidth - 10;
 canvas.height = window.innerHeight - 220;
 
+//color del canvas
+contexto.fillStyle = "white";
+contexto.fillRect = 0, 0, canvas.width, canvas.height;
+
 //Variables
 let x, y, color = "black", grosor = 8, newX, newY, dibujando = false;
 
+// Color y Grosor
+size.addEventListener("input", _ => grosor = size.value)
+colorElegido.addEventListener("input", _ => color = colorElegido.value);
+
 //Eventos
-/*canvas.addEventListener("mousedown", e =>{
+canvas.addEventListener("mousedown", e =>{
     if(e.changedTouches == undefined){
         x = e.clientX - canvas.offsetLeft;
         y = e.clientY - canvas.offsetTop;
@@ -28,7 +35,6 @@ canvas.addEventListener("mousemove", e =>{
         dibujar(color, grosor, contexto, x, y, newX, newY);
         x = newX;
         y = newY;
-        console.log(e.changedTouches)
     }
 })
 canvas.addEventListener("mouseup", _ =>{
@@ -36,7 +42,7 @@ canvas.addEventListener("mouseup", _ =>{
     x = 0;
     y = 0;
     dibujando = false;
-})*/
+})
 
 //Función para dibujar
 function dibujar(color, size, lienzo, xinicial, yinicial, xfinal, yfinal){
@@ -57,6 +63,7 @@ canvas.addEventListener("touchstart", e =>{
     dibujando = true;
 })
 canvas.addEventListener("touchmove", e => {
+    e.preventDefault();
     if(dibujando){
         newX = e.changedTouches[0].pageX - canvas.offsetLeft;
         newY = e.changedTouches[0].pageY - canvas.offsetTop;
@@ -64,4 +71,8 @@ canvas.addEventListener("touchmove", e => {
         x = newX;
         y = newY;
     }
+})
+// Borrador
+erased.addEventListener("input", _ => {
+    erased.checked ? color = "white" : color = colorElegido.value;
 })

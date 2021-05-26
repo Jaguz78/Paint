@@ -1,4 +1,4 @@
-/*const principalColor = document.getElementById("principal-color")
+const principalColor = document.getElementById("principal-color")
 const lienzo = document.getElementById("dibujito");
 const papel = lienzo.getContext("2d");
 const liChallenge = document.getElementById("li-challenge");
