@@ -1,10 +1,11 @@
-var canvas = document.getElementById("dibujito");
-var hoja = canvas.getContext("2d");
-var rect = canvas.getBoundingClientRect();
-var colorElegido = document.getElementById("input-color");
-var size = document.getElementById("size");
+const canvas = document.getElementById("dibujito");
+const hoja = canvas.getContext("2d");
+const rect = canvas.getBoundingClientRect();
+const colorElegido = document.getElementById("input-color");
+const size = document.getElementById("size");
+const main = document.getElementById("main");
 canvas.width = window.innerWidth - 10;
-canvas.height = window.innerHeight - 270;
+canvas.height = window.innerHeight - 220;
 hoja.fillStyle = "white";
 hoja.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -65,3 +66,12 @@ function borrar (){
         color = colorElegido.value;
     }
 }
+
+/* Hacer que funcione para celulares */
+canvas.addEventListener("touchmove", function (e) {
+    if (e.changedTouches == undefined) {
+        x = e.changedTouches[0].pageX - canvas.offsetLeft;
+        y = e.changedTouches[0].pageY - canvas.offsetTop; 
+        dibujarLinea(color, x, y, e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop, hoja, grosor);
+    }   
+});
