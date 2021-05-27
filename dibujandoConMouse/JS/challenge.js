@@ -9,6 +9,7 @@ const imgs = ["https://image.freepik.com/vector-gratis/pollo-dibujos-animados_69
     "https://vignette.wikia.nocookie.net/club-penguin-super-fanon/images/1/11/Pizzero_3DS.png/revision/latest?cb=20160920005038&path-prefix=es",
     "https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png",
     "https://www.graphicpie.com/wp-content/uploads/2020/11/among-us-green-png.png",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Simbolo_konoha.svg/480px-Simbolo_konoha.svg.png"
     ]
 
 //----Llamada a funciones----

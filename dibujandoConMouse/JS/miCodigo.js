@@ -4,10 +4,17 @@ const contexto = canvas.getContext("2d");
 const size = document.getElementById("size");
 const colorElegido = document.getElementById("input-color");
 const erased = document.getElementById("erased-input");
+const reloadIcon = document.getElementById("reload-input");
 
 //Tamaño del canvas
-canvas.width = window.innerWidth - 10;
-canvas.height = window.innerHeight - 200;
+if(window.innerWidth < 1000){
+    canvas.width = window.innerWidth - 10;
+    canvas.height = window.innerHeight - 200;
+}
+else{
+    canvas.width = window.innerWidth - 10;
+    canvas.height = window.innerHeight - 240;
+}
 
 //color del canvas
 contexto.fillStyle = "white";
@@ -38,7 +45,6 @@ canvas.addEventListener("mousemove", e =>{
     }
 })
 canvas.addEventListener("mouseup", _ =>{
-    dibujar(color, grosor, contexto, x, y, newX, newY)
     x = 0;
     y = 0;
     dibujando = false;
@@ -70,9 +76,13 @@ canvas.addEventListener("touchmove", e => {
         dibujar(color, grosor, contexto, x, y, newX, newY);
         x = newX;
         y = newY;
+        console.log(numRandom)
     }
 })
 // Borrador
 erased.addEventListener("input", _ => {
     erased.checked ? color = "white" : color = colorElegido.value;
 })
+
+//Reload
+reloadIcon.addEventListener("input", _ => document.location.reload())

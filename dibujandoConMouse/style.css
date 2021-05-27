@@ -71,7 +71,6 @@ canvas{
     border: solid 2px var(--medium-blue);
     border-radius: 8px;
     cursor: pointer;
-    position: absolute;
 }
 .challenge__div--container{
     width: 80%;
@@ -80,6 +79,7 @@ canvas{
     position: absolute;
     border: solid 2px var(--medium-blue);
     border-radius: 15px;
+    background-color: var(--white);
 }
 .challenge__div--container a img{
     width: 100%;
@@ -88,13 +88,14 @@ canvas{
     border-radius: 13px 13px 0 0;
 }
 .challenge__div--bottom{
-    width: 100%;
+    width: 101%;
     height: 15%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     background-color: var(--medium-blue);
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 11px 11px;
+    margin-left: -1px;
 }
 .challenge__div--bottom i{
     font-size: 1.8rem;
@@ -113,7 +114,7 @@ canvas{
     left: 4px;
     bottom: 90px;
 }
-#erased-input{
+#erased-input, #reload-input{
     display: none;
 }
 .erased-container label{
