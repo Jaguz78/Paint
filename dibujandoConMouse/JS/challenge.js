@@ -8,7 +8,7 @@ const imgChallenge = document.getElementById("challenge--img");
 const imgs = ["https://image.freepik.com/vector-gratis/pollo-dibujos-animados_6996-1070.jpg",
     "https://vignette.wikia.nocookie.net/club-penguin-super-fanon/images/1/11/Pizzero_3DS.png/revision/latest?cb=20160920005038&path-prefix=es",
     "https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png",
-    "https://www.citypng.com/public/uploads/preview/-41603228248q6nqsvxdzn.png",
+    "https://www.graphicpie.com/wp-content/uploads/2020/11/among-us-green-png.png",
     ]
 
 //----Llamada a funciones----
@@ -17,7 +17,7 @@ lienzo.addEventListener("click", displayOff);
 iRandom.addEventListener("click", changeImage);
 
 let intento = new Image();
-intento.src = "../img/gatoMotivado.jpg";
+intento.src = "https://image.freepik.com/vector-gratis/pollo-dibujos-animados_6996-1070.jpg";
 intento.width = 10;
 intento.height = 10;
 
