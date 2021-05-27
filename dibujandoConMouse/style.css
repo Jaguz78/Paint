@@ -75,15 +75,15 @@ canvas{
 .challenge__div--container{
     width: 80%;
     max-width: 300px;
-    height: 40%;
+    height: 287px;
     position: absolute;
     border: solid 2px var(--medium-blue);
     border-radius: 15px;
 }
-.challenge__div--container img{
+.challenge__div--container a img{
     width: 100%;
     max-width: 300px;
-    height: 85%;
+    height: 240px;
     border-radius: 13px 13px 0 0;
 }
 .challenge__div--bottom{
