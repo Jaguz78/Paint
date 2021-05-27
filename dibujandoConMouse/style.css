@@ -71,6 +71,7 @@ canvas{
     border: solid 2px var(--medium-blue);
     border-radius: 8px;
     cursor: pointer;
+    position: absolute;
 }
 .challenge__div--container{
     width: 80%;

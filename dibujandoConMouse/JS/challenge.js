@@ -30,7 +30,16 @@ function displayOff(){
 }
 randomNumber = (max) => Math.floor(Math.random()*max);
 
+let numActual = 0;
+
 function changeImage(){
-    imgChallenge.src = "../img/loading.png";
-    setTimeout(_ => imgChallenge.src = imgs[Math.floor(randomNumber(imgs.length))], 400)
+    imgChallenge.src = "https://jooinn.com/images/loading-5.png";
+    let numRandom = Math.floor(randomNumber(imgs.length))
+        while(numRandom === numActual){
+            numRandom = Math.floor(randomNumber(imgs.length))
+        }
+        numActual = numRandom;
+    setTimeout(_ => {
+        imgChallenge.src = imgs[numRandom]
+    }, 400)
 }

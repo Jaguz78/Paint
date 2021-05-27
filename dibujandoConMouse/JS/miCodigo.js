@@ -7,7 +7,7 @@ const erased = document.getElementById("erased-input");
 
 //Tamaño del canvas
 canvas.width = window.innerWidth - 10;
-canvas.height = window.innerHeight - 220;
+canvas.height = window.innerHeight - 200;
 
 //color del canvas
 contexto.fillStyle = "white";
